@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@source "../node_modules/@2njeong/inz-ui-kit/src";
+@import "@2njeong/inz-ui-kit/styles";
+
+:root {
+  --game-bg: #2a1f3d;
+  --lobby-floor: #4a3f5c;
+  --lobby-wall: #1a1528;
+  --door-color: #f0c040;
+}
+
+body {
+  margin: 0;
+  background-color: #080515;
+  color: #ffffff;
+}

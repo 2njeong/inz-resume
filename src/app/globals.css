@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @source "../node_modules/@2njeong/inz-ui-kit/src";
 @import "@2njeong/inz-ui-kit/styles";
 

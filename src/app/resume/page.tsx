@@ -367,9 +367,44 @@ const ResumePage = () => {
         {/* ── Projects ── */}
         <Section title="Projects">
           <Project
+            name="NODE"
+            description="AI-Native 지능형 학습 플랫폼 — 학습 자료 업로드 → AI 자동 분석 → RAG 채팅, 지식 맵, 퀴즈 생성"
+            period="2026.02 ~"
+            techStack="Next.js 14 · TypeScript · Tailwind CSS · Supabase (Auth, DB, Storage, pgvector) · Gemini 2.0 Flash · Vercel AI SDK · React Flow · TanStack Query"
+            urls={[
+              { label: "GitHub", href: "https://github.com/2njeong/node" },
+              { label: "Site", href: "http://158.247.249.164" },
+            ]}
+          >
+            <BulletList
+              items={[
+                <>
+                  <Highlight>문서 AI 처리 파이프라인</Highlight> 설계·구현 — Gemini Vision OCR → 텍스트 청킹 →
+                  Gemini Embedding 벡터화 → Supabase pgvector 저장까지 End-to-End 자동화
+                </>,
+                <>
+                  pgvector 코사인 유사도 검색 기반{" "}
+                  <Highlight>RAG 채팅 시스템</Highlight> 구축 — 학습 자료 맥락 기반 AI 답변
+                </>,
+                <>
+                  Gemini AI로 핵심 개념·관계를 자동 추출하고 React Flow로 시각화하는{" "}
+                  <Highlight>AI 지식 맵</Highlight> 구현 — 5가지 카테고리 자동 분류
+                </>,
+                <>
+                  학습 자료 기반 빈칸 채우기·OX 퀴즈를 AI가 자동 출제·채점하는{" "}
+                  <Highlight>AI 퀴즈 시스템</Highlight>
+                </>,
+                <>
+                  <Highlight>AI-Native 개발 프로세스</Highlight> — Claude Code와 PDCA 사이클 기반 설계·구현·검증
+                </>,
+              ]}
+            />
+          </Project>
+
+          <Project
             name="inz-ui-kit"
             description="오픈소스 React 컴포넌트 라이브러리 — Tree-shaking 최적화된 프로덕션 레벨 디자인 시스템"
-            period="2025.05 ~"
+            period="2025.09 – 2025.12"
             techStack="React 19 · TypeScript · Vite · Tailwind CSS v4 · CVA · Floating UI · Vitest · pnpm workspace · GitHub Actions"
             urls={[
               { label: "GitHub", href: "https://github.com/2njeong/inz-ui" },
@@ -406,9 +441,48 @@ const ResumePage = () => {
           </Project>
 
           <Project
+            name="Context Naming Consultant"
+            description="코드 맥락을 AI가 분석하여 변수·함수·컴포넌트 이름을 추천하는 VS Code Extension"
+            period="2026.01 – 2026.02"
+            techStack="TypeScript · VS Code Extension API · Webpack · OpenAI API · Anthropic API · Gemini API · Ollama REST API"
+            urls={[
+              { label: "GitHub", href: "https://github.com/2njeong/naming-consultant" },
+              {
+                label: "Marketplace",
+                href: "https://marketplace.visualstudio.com/items?itemName=slowdreamer.context-naming-consultant",
+              },
+            ]}
+          >
+            <BulletList
+              items={[
+                <>
+                  코드 선택 → 맥락 수집 → AI 분석 → QuickPick UI로 이름 후보 표시 → 자동 적용까지{" "}
+                  <Highlight>원스텝 네이밍 워크플로우</Highlight> 설계·구현
+                </>,
+                <>
+                  <Metric>5개 AI Provider 추상화 레이어</Metric> 설계 (OpenAI, Claude, Gemini, Azure OpenAI, Ollama)
+                  — 벤더 종속 없이 교체 가능한 아키텍처
+                </>,
+                <>
+                  Ollama 로컬 LLM 기본 지원으로{" "}
+                  <Highlight>API Key 없이 무료 사용</Highlight> 가능한 진입장벽 최소화
+                </>,
+                <>
+                  <code>.naming.json</code> / <code>.naming.md</code> 팀 네이밍 룰 파일 로드 → AI 추천 결과 자동
+                  필터링으로 <Highlight>팀 컨벤션 강제</Highlight> 기능 구현
+                </>,
+                <>
+                  VS Code Secret Storage (OS Keychain) 활용{" "}
+                  <Highlight>보안 API Key 관리</Highlight> 및 i18n 다국어 지원 (한/영)
+                </>,
+              ]}
+            />
+          </Project>
+
+          <Project
             name="Golaping"
             description={`"오늘 뭐 먹지?" 같은 실생활 고민을 실시간 투표로 해결하는 서비스`}
-            period="2025.01 ~"
+            period="2025.01 – 2025.03"
             techStack="React · TypeScript · WebSocket · SharedWorker · matter.js · Docker · EC2"
             urls={[
               {
